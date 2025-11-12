@@ -126,5 +126,3 @@ def usersPrompt():
         }
     )
     return processMessage(), 200
-
-app.run()    
