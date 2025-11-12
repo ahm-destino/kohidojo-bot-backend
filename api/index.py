@@ -12,7 +12,6 @@ app.secret_key = '12345'
 app.permanent_session_lifetime = timedelta(minutes = 5)
 
 
-load_dotenv('key.env')
 API_KEY = os.getenv("GROQ_API_KEY")
 print(f"Loaded API Key: {API_KEY}")
 
