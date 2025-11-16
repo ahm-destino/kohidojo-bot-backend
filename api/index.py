@@ -37,11 +37,66 @@ faqs:
     answer: Absolutely — we serve teas, smoothies, matcha, pastries, and other non-coffee favorites.
 
 products:
-  - Espresso | ₦1500 | Bold, rich shot of pure coffee flavor. | https://kohidojo.com/products/espresso
-  - Iced Caramel Latte | ₦2500 | Smooth espresso with milk, ice, and caramel drizzle. | https://kohidojo.com/products/iced-caramel-latte
-  - Matcha Latte | ₦2700 | Creamy Japanese matcha with steamed milk. | https://kohidojo.com/products/matcha-latte
-  - Café Mocha | ₦2800 | Espresso, chocolate, and milk. | https://kohidojo.com/products/cafe-mocha
-  - Croissant | ₦1200 | Golden, buttery French pastry. | https://kohidojo.com/products/croissant
+  - category: Coffee
+    name: Blackie
+    description: Freshly brewed hot black coffee — simple, strong, no milk, no stress.
+    price: "₦500"
+    purchase_link: https://kohidojo.com/products/blackie
+
+  - category: Coffee
+    name: Kohi Hot
+    description: Smooth hot coffee with milk. Lure comfort in a cup.
+    price: "₦500 / ₦1000"
+    purchase_link: https://kohidojo.com/products/kohi-hot
+
+  - category: Coffee
+    name: Kohi Cold
+    description: Chilled coffee served cold and refreshing. Perfect for the heat.
+    price: "₦500 / ₦1000"
+    purchase_link: https://kohidojo.com/products/kohi-cold
+
+  - category: Kohi Fresh
+    name: Sunny Blend
+    description: Banana • Watermelon • Apple — bright, light, and morning-sweet.
+    price: "₦1200"
+    purchase_link: https://kohidojo.com/products/sunny-blend
+
+  - category: Kohi Fresh
+    name: Island Flow
+    description: Banana • Pineapple • Apple — tropical, smooth, and sunny calm.
+    price: "₦1200"
+    purchase_link: https://kohidojo.com/products/island-flow
+
+  - category: Kohi Fresh
+    name: Loja’s Bowl
+    description: Watermelon • Pineapple • Apple • Banana — a colorful fruit rush that feels like home.
+    price: "₦1500"
+    purchase_link: https://kohidojo.com/products/lojas-bowl
+
+  - category: Shawarma
+    name: Chickie
+    description: Tender grilled chicken wrapped with fresh veggies and creamy sauce.
+    price: "₦1000 / ₦1500 / ₦2000"
+    purchase_link: https://kohidojo.com/products/chickie
+
+  - category: Shawarma
+    name: Beefie
+    description: Juicy beef shawarma layered with our house spice mix and garlic cream.
+    price: "₦1500 / ₦2000"
+    purchase_link: https://kohidojo.com/products/beefie
+
+  - category: Shawarma
+    name: Mixie (Special)
+    description: The best of both worlds — chicken + beef with double sauce love.
+    price: "₦3000"
+    purchase_link: https://kohidojo.com/products/mixie-special
+
+  - category: Shawarma
+    name: Mini Shawas
+    description: Small, quick bite version of our classics. Same flavor, smaller wrap.
+    price: "₦1000"
+    purchase_link: https://kohidojo.com/products/mini-shawas
+
 
 groups:
   - Kohi Dojo Creatives Circle | A space for local creatives to share ideas. | https://kohidojo.com/groups/creatives-circle
