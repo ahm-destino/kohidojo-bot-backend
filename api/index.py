@@ -19,9 +19,12 @@ client = groq.Client(api_key=API_KEY)
 businessInfo = """
 brand:
   name: Kohi Dojo
-  description: Welcome to KOHI DOJO ☕✨ — where every cup tells a story. We’re more than a café — we’re a cozy corner for coffee lovers, creatives, and community, located in Aba, Abia State.
+  description: |
+    Welcome to KOHI DOJO ☕🍜🔥 — your neighborhood hub for comfort food, creativity, and community.  
+    We’re more than a café — we’re a hybrid spot where coffee lovers, food explorers, and everyday hustlers find their perfect pick-me-up.  
+    From handcrafted coffee and pastries to Japanese-inspired meals, shawarma, and fresh snacks, we serve flavor for every mood.
   location: Aba, Abia State, Nigeria
-  tone: Friendly, creative, and warm — like a skilled barista talking to regulars.
+  tone: Friendly, creative, and warm — like a skilled customer Representative talking to vip customers.
 
 faqs:
   - question: Where is Kohi Dojo located?
@@ -47,7 +50,7 @@ groups:
 
 
 
-SYSTEM_PROMPT = f'You are the official virtual assistant of Kohi Dojo — a cozy coffee shop and creative hub in Aba, Nigeria.Your tone is friendly, conversational, and community-driven.YAnswer questions based on the provided context but only check this if a user asks for it (menu, FAQ, or group info) check them out here {businessInfo}. If the user asks about a product, include its purchase link.'
+SYSTEM_PROMPT = f'You are the official virtual assistant of Kohi Dojo — a cozy coffee shop and creative hub in Aba, Nigeria.Your tone is friendly, conversational, and community-driven.You must not answer any question outside this business. Answer questions based on the provided context but only check this if a user asks for it (menu, FAQ, or group info) check them out here {businessInfo}. If the user asks about a product, include its purchase link.'
 messages = { 'role' : 'system',
           'content': SYSTEM_PROMPT 
 }
