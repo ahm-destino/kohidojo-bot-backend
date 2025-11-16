@@ -16,92 +16,121 @@ API_KEY = os.getenv("GROQ_API_KEY")
 print(f"Loaded API Key: {API_KEY}")
 
 client = groq.Client(api_key=API_KEY)
-businessInfo = """
-brand:
-  name: Kohi Dojo
-  description: |
-    Welcome to KOHI DOJO ☕🍜🔥 — your neighborhood hub for comfort food, creativity, and community.  
-    We’re more than a café — we’re a hybrid spot where coffee lovers, food explorers, and everyday hustlers find their perfect pick-me-up.  
-    From handcrafted coffee and pastries to Japanese-inspired meals, shawarma, and fresh snacks, we serve flavor for every mood.
-  location: Aba, Abia State, Nigeria
-  tone: Friendly, creative, and warm — like a skilled customer Representative talking to vip customers.
+businessInfo = {
+  "brand": {
+    "name": "Kohi Dojo",
+    "description": "Welcome to KOHI DOJO ☕✨ — where every cup tells a story. We’re more than a café — we’re a cozy corner for coffee lovers, creatives, and community, located in Aba, Abia State.",
+    "location": "Aba, Abia State, Nigeria",
+    "tone": "Friendly, creative, and warm — like a skilled customer service representative talking to regulars."
+  },
 
-faqs:
-  - question: Where is Kohi Dojo located?
-    answer: We are located in Aba, Abia State, Nigeria. You can visit our cozy shop or order online through our website.
-  - question: Do you offer home delivery?
-    answer: Yes! We deliver within Aba city and nearby areas. Simply place an order online and select your delivery option.
-  - question: What makes your coffee special?
-    answer: We source our beans from local and African farmers, roast them fresh weekly, and brew every cup with precision and love.
-  - question: Do you have non-coffee options?
-    answer: Absolutely — we serve teas, smoothies, matcha, pastries, and other non-coffee favorites.
+  "faqs": [
+    {
+      "question": "Where is Kohi Dojo located?",
+      "answer": "We are located in Aba, Abia State, Nigeria. You can visit our cozy shop or order online through our website."
+    },
+    {
+      "question": "Do you offer home delivery?",
+      "answer": "Yes! We deliver within Aba city and nearby areas. Simply place an order online and select your delivery option."
+    },
+    {
+      "question": "What makes your coffee special?",
+      "answer": "We source our beans from local and African farmers, roast them fresh weekly, and brew every cup with precision and love."
+    },
+    {
+      "question": "Do you have non-coffee options?",
+      "answer": "Absolutely — we serve teas, smoothies, matcha, pastries, and other non-coffee favorites."
+    }
+  ],
 
-products:
-  - category: Coffee
-    name: Blackie
-    description: Freshly brewed hot black coffee — simple, strong, no milk, no stress.
-    price: "₦500"
-    purchase_link: https://kohidojo.com/products/blackie
+  "products": [
+    {
+      "category": "Coffee",
+      "name": "Blackie",
+      "description": "Freshly brewed hot black coffee — simple, strong, no milk, no stress.",
+      "price": "₦500",
+      "purchase_link": "https://kohidojo.com/products/blackie"
+    },
+    {
+      "category": "Coffee",
+      "name": "Kohi Hot",
+      "description": "Smooth hot coffee with milk. Lure comfort in a cup.",
+      "price": "₦500 / ₦1000",
+      "purchase_link": "https://kohidojo.com/products/kohi-hot"
+    },
+    {
+      "category": "Coffee",
+      "name": "Kohi Cold",
+      "description": "Chilled coffee served cold and refreshing. Perfect for the heat.",
+      "price": "₦500 / ₦1000",
+      "purchase_link": "https://kohidojo.com/products/kohi-cold"
+    },
 
-  - category: Coffee
-    name: Kohi Hot
-    description: Smooth hot coffee with milk. Lure comfort in a cup.
-    price: "₦500 / ₦1000"
-    purchase_link: https://kohidojo.com/products/kohi-hot
+    {
+      "category": "Kohi Fresh",
+      "name": "Sunny Blend",
+      "description": "Banana • Watermelon • Apple — bright, light, and morning-sweet.",
+      "price": "₦1200",
+      "purchase_link": "https://kohidojo.com/products/sunny-blend"
+    },
+    {
+      "category": "Kohi Fresh",
+      "name": "Island Flow",
+      "description": "Banana • Pineapple • Apple — tropical, smooth, and sunny calm.",
+      "price": "₦1200",
+      "purchase_link": "https://kohidojo.com/products/island-flow"
+    },
+    {
+      "category": "Kohi Fresh",
+      "name": "Loja’s Bowl",
+      "description": "Watermelon • Pineapple • Apple • Banana — a colorful fruit rush that feels like home.",
+      "price": "₦1500",
+      "purchase_link": "https://kohidojo.com/products/lojas-bowl"
+    },
 
-  - category: Coffee
-    name: Kohi Cold
-    description: Chilled coffee served cold and refreshing. Perfect for the heat.
-    price: "₦500 / ₦1000"
-    purchase_link: https://kohidojo.com/products/kohi-cold
+    {
+      "category": "Shawarma",
+      "name": "Chickie",
+      "description": "Tender grilled chicken wrapped with fresh veggies and creamy sauce.",
+      "price": "₦1000 / ₦1500 / ₦2000",
+      "purchase_link": "https://kohidojo.com/products/chickie"
+    },
+    {
+      "category": "Shawarma",
+      "name": "Beefie",
+      "description": "Juicy beef shawarma layered with our house spice mix and garlic cream.",
+      "price": "₦1500 / ₦2000",
+      "purchase_link": "https://kohidojo.com/products/beefie"
+    },
+    {
+      "category": "Shawarma",
+      "name": "Mixie (Special)",
+      "description": "The best of both worlds — chicken + beef with double sauce love.",
+      "price": "₦3000",
+      "purchase_link": "https://kohidojo.com/products/mixie-special"
+    },
+    {
+      "category": "Shawarma",
+      "name": "Mini Shawas",
+      "description": "Small, quick bite version of our classics. Same flavor, smaller wrap.",
+      "price": "₦1000",
+      "purchase_link": "https://kohidojo.com/products/mini-shawas"
+    }
+  ],
 
-  - category: Kohi Fresh
-    name: Sunny Blend
-    description: Banana • Watermelon • Apple — bright, light, and morning-sweet.
-    price: "₦1200"
-    purchase_link: https://kohidojo.com/products/sunny-blend
-
-  - category: Kohi Fresh
-    name: Island Flow
-    description: Banana • Pineapple • Apple — tropical, smooth, and sunny calm.
-    price: "₦1200"
-    purchase_link: https://kohidojo.com/products/island-flow
-
-  - category: Kohi Fresh
-    name: Loja’s Bowl
-    description: Watermelon • Pineapple • Apple • Banana — a colorful fruit rush that feels like home.
-    price: "₦1500"
-    purchase_link: https://kohidojo.com/products/lojas-bowl
-
-  - category: Shawarma
-    name: Chickie
-    description: Tender grilled chicken wrapped with fresh veggies and creamy sauce.
-    price: "₦1000 / ₦1500 / ₦2000"
-    purchase_link: https://kohidojo.com/products/chickie
-
-  - category: Shawarma
-    name: Beefie
-    description: Juicy beef shawarma layered with our house spice mix and garlic cream.
-    price: "₦1500 / ₦2000"
-    purchase_link: https://kohidojo.com/products/beefie
-
-  - category: Shawarma
-    name: Mixie (Special)
-    description: The best of both worlds — chicken + beef with double sauce love.
-    price: "₦3000"
-    purchase_link: https://kohidojo.com/products/mixie-special
-
-  - category: Shawarma
-    name: Mini Shawas
-    description: Small, quick bite version of our classics. Same flavor, smaller wrap.
-    price: "₦1000"
-    purchase_link: https://kohidojo.com/products/mini-shawas
-
-
-groups:
-  - Kohi Dojo Creatives Circle | A space for local creatives to share ideas. | https://kohidojo.com/groups/creatives-circle
-  - Coffee Lovers Club | Members-only club with discounts and barista lessons. | https://kohidojo.com/groups/coffee-lovers-club
-"""
+  "groups": [
+    {
+      "name": "Kohi Dojo Creatives Circle",
+      "description": "A space where local artists, designers, and thinkers meet over coffee to share ideas.",
+      "join_link": "https://kohidojo.com/groups/creatives-circle"
+    },
+    {
+      "name": "Coffee Lovers Club",
+      "description": "Exclusive members-only club with discounts, early product launches, and barista lessons.",
+      "join_link": "https://kohidojo.com/groups/coffee-lovers-club"
+    }
+  ]
+}
 
 
 
